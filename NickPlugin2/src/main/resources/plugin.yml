@@ -1,0 +1,23 @@
+name: NickPlugin
+version: 1.0.0
+main: com.nickplugin.NickPlugin
+api-version: '1.21'
+description: Allows players to set temporary nicknames
+authors: [NickPlugin]
+
+commands:
+  nick:
+    description: Change your display nickname
+    usage: /nick <name|off> | /nick give <player>
+    permission: nick.use
+
+permissions:
+  nick.use:
+    description: Allows use of /nick
+    default: op
+  nick.op:
+    description: Full access to /nick including /nick give
+    default: op
+  nick.give:
+    description: Allows granting /nick access to others
+    default: op
